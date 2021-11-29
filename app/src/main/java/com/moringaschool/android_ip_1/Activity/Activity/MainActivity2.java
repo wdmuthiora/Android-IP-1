@@ -5,7 +5,9 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import com.moringaschool.android_ip_1.R;
@@ -19,6 +21,8 @@ public class MainActivity2 extends AppCompatActivity {
 
     @BindView(R.id.profileGreeting)
     TextView profileGreeting;
+    @BindView(R.id.searchBtn)
+    ConstraintLayout searchBtn;
 
 
     @Override
@@ -28,6 +32,13 @@ public class MainActivity2 extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
+        searchBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity2.this,MainActivity3.class));
+
+            }
+        });
     }
 
 
