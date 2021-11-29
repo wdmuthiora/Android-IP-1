@@ -45,12 +45,12 @@ public class MainActivity2 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         //get data passed from MainActivity
         Intent intent = getIntent();
         String inputUserName = intent.getStringExtra("inputUserName");
         profileGreeting.setText("Hi Kiongoss " + inputUserName);
         Log.d("MainActivity2", "In the onCreate method!");
     }
-
 
 }
