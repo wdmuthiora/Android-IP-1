@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Android_Ip_1">
         <activity
+            android:name=".Activity.Activity.MainActivity3"
+            android:exported="false" />
+        <activity
             android:name=".Activity.Activity.MainActivity2"
             android:exported="false" />
         <activity
