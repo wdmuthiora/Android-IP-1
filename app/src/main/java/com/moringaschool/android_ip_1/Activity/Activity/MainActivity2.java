@@ -2,17 +2,14 @@ package com.moringaschool.android_ip_1.Activity.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.google.android.material.textfield.TextInputEditText;
 import com.moringaschool.android_ip_1.R;
-
-import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,10 +20,13 @@ public class MainActivity2 extends AppCompatActivity {
     TextView profileGreeting;
     @BindView(R.id.searchBtn)
     ConstraintLayout searchBtn;
+    @BindView(R.id.findSomething)
+    TextInputEditText findSomething;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
@@ -35,8 +35,13 @@ public class MainActivity2 extends AppCompatActivity {
         searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity2.this,MainActivity3.class));
+                //capture user input
+                String query = findSomething.getText().toString();
 
+                Intent intent=new Intent(MainActivity2.this,MainActivity3.class);
+                //pass the captured input to the next Activity
+                intent.putExtra("query", query);
+                startActivity(intent);
             }
         });
     }

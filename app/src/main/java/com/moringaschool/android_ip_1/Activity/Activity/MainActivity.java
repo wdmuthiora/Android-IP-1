@@ -14,6 +14,8 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.startBtn) ConstraintLayout startBtn;
+    @BindView(R.id.userName) ConstraintLayout userName;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

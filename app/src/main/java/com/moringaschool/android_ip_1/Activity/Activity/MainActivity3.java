@@ -14,8 +14,6 @@ import butterknife.ButterKnife;
 
 public class MainActivity3 extends AppCompatActivity {
 
-    @BindView(R.id.editTextPersonName)
-    TextView editTextPersonName;
     @BindView(R.id.listView)
     ListView listView;
 
@@ -29,5 +27,7 @@ public class MainActivity3 extends AppCompatActivity {
         ButterKnife.bind(this);
 
         ListAdapter adapter = new ListAdapter(this, android.R.layout.simple_list_item_1, arrayOfItems);
+        listView.setAdapter(adapter);
+
     }
 }
