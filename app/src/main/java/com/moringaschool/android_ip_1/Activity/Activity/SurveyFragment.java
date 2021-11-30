@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -29,6 +30,7 @@ public class SurveyFragment extends DialogFragment {
             @Override
             public void onClick(View v) {
                 dismiss();
+
             }
         });
 
@@ -41,6 +43,7 @@ public class SurveyFragment extends DialogFragment {
             public void onClick(View v) {
                 Log.d("testing", selectedRadioButton.getText().toString());
                 dismiss();
+
             }
 
         });

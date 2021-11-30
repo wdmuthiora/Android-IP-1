@@ -1,6 +1,7 @@
 package com.moringaschool.android_ip_1.Activity.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
@@ -19,11 +20,11 @@ public class MainActivity3 extends AppCompatActivity {
     @BindView(R.id.listView)
     ListView listView;
 
-    @BindView(R.id.surveyBtn)
-    Button surveyBtn;
+    @BindView(R.id.takeSurveyBtn)
+    ConstraintLayout takeSurveyBtn;
 
     //a bunch of items to be displayed inside the ListView, using the custom adapter.
-    private String[] arrayOfItems = new String[] {"Sweet Hereafter", "Cricket", "Hawthorne Fish House", "Viking Soul Food"};
+    private String[] arrayOfItems = new String[] {"PowerPuff Girls", "Mojo Jojo", "Kids next door", "Cow and Chicken"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +36,7 @@ public class MainActivity3 extends AppCompatActivity {
         ListAdapter adapter = new ListAdapter(this, android.R.layout.simple_list_item_1, arrayOfItems);
         listView.setAdapter(adapter);
 
-        surveyBtn.setOnClickListener(new View.OnClickListener() {
+        takeSurveyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FragmentManager fm = getSupportFragmentManager();
