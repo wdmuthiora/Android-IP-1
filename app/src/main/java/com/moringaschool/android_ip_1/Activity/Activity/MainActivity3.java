@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.moringaschool.android_ip_1.Activity.Adapter.ListAdapter;
 import com.moringaschool.android_ip_1.R;

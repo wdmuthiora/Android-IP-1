@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.moringaschool.android_ip_1.R;
@@ -24,7 +25,6 @@ public class MainActivity2 extends AppCompatActivity {
     @BindView(R.id.findSomething)
     TextInputEditText findSomething;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -39,7 +39,7 @@ public class MainActivity2 extends AppCompatActivity {
                 //capture user input
                 String query = findSomething.getText().toString();
 
-                Intent intent=new Intent(MainActivity2.this,MainActivity3.class);
+                Intent intent=new Intent(MainActivity2.this, MainActivity3.class);
                 //pass the captured input to the next Activity
                 intent.putExtra("query", query);
                 startActivity(intent);
@@ -49,8 +49,13 @@ public class MainActivity2 extends AppCompatActivity {
         //get data passed from MainActivity
         Intent intent = getIntent();
         String inputUserName = intent.getStringExtra("inputUserName");
-        profileGreeting.setText("Hi Kiongoss " + inputUserName);
+
+        profileGreeting.setText("Hi " + inputUserName);
         Log.d("MainActivity2", "In the onCreate method!");
+
+        String.format("Welcome back, Kiongoss %s", inputUserName);
+        Toast.makeText(MainActivity2.this, inputUserName, Toast.LENGTH_LONG).show();
+
     }
 
 }
