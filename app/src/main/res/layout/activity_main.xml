@@ -56,8 +56,7 @@
         android:background="@drawable/orange_button_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:visibility="gone">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:layout_width="0dp"

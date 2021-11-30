@@ -40,8 +40,8 @@ public class MainActivity3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 FragmentManager fm = getSupportFragmentManager();
-                MoodDialogFragment moodDialogFragment = new MoodDialogFragment ();
-                moodDialogFragment.show(fm, "Sample Fragment");
+                SurveyFragment surveyFragment = new SurveyFragment ();
+                surveyFragment.show(fm, "Sample Fragment");
             }
         });
     }
